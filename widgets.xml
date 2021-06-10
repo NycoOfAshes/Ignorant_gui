@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<widgets>
+    <Root>
+        <title id="app_title" />
+        <iconbitmap bitmap="ignorant_gui.ico" />
+        <grid />
+        <update />
+        <resizable height="0" width="0" />
+    </Root>
+    <OptionMenu>
+        <textvariable id="selector" value="">
+            <Menu>
+                <MenuList>English</MenuList>
+                <MenuList>French</MenuList>
+            </Menu>
+            <trace mode="w" />
+        </textvariable>
+        <grid column="0" row="0" sticky="W" />
+    </OptionMenu>
+    <Label anchor="center" fg="black" bg="white">
+        <textvariable id="region_label" value=""/>
+        <grid column="1" row="1" sticky="EW"/>
+    </Label>
+    <Label anchor="center" fg="black" bg="white">
+        <textvariable id="phone_label" value=""/>
+        <grid column="0" row="1" sticky="EW"/>
+    </Label>
+    <Entry width="50" validate="key">
+        <textvariable id="phone_entry" value=""/>
+        <validatecommand id="vcmd"/>
+        <focus_set />
+        <selection_range start="0" end="end"/>
+        <grid column="0" row="2" sticky="EW"/>
+    </Entry>
+    <Entry width="12" validate="key">
+        <textvariable id="region_entry" value=""/>
+        <validatecommand id="vcmd"/>
+         <grid column="1" row="2" sticky="EW"/>
+    </Entry>
+    <Checkbutton width="50" text="Amazon" justify="left">
+        <variable id="check_amazon_int" value="0" stock="check_button_vars">
+            <trace mode="w" />
+        </variable>
+        <grid column="0" row="3" sticky="EW" columnspan="2"/>
+    </Checkbutton>
+    <Checkbutton width="50" text="Instagram" justify="left">
+        <variable id="check_instagram_int" value="0" stock="check_button_vars">
+            <trace mode="w" />
+        </variable>
+        <grid column="0" row="4" sticky="EW" columnspan="2"/>
+    </Checkbutton>
+    <Checkbutton width="50" text="SnapChat" justify="left">
+        <variable id="check_snapchat_int" value="0" stock="check_button_vars">
+            <trace mode="w" />
+        </variable>
+        <grid column="0" row="5" sticky="EW" columnspan="2"/>
+    </Checkbutton>
+    <Checkbutton width="50" justify="left">
+        <textvariable id="check_all" value="" />
+        <variable id="check_all_int" value="0" stock="check_button_vars">
+            <trace mode="w" />
+        </variable>
+        <grid column="0" row="6" sticky="EW" columnspan="2"/>
+    </Checkbutton>
+    <Button width="62" state="disabled">
+        <textvariable id="phone_button" value=""/>
+        <command />
+        <grid column="0" row="7" sticky="EW" columnspan="2"/>
+    </Button>
+</widgets>

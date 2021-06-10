@@ -1,0 +1,21 @@
+{
+  "object_type": "ConfigText",
+  "french_text": {"app_title": "ignorant graphique", "phone_label": "N° de téléphone",
+                  "region_label": "Code région", "check_all": "Tout sélectionner",
+                  "phone_button": "Rechercher",
+                  "error_title": "Erreur de saisie", "error_message":
+                      "le numéro de téléphone est absent ou est de mauvaise forme",
+                  "amazon_label": "Numéro de téléphone trouvé pour Amazon", "instagram_label":
+                  "Numéro de téléphone trouvé pour Instagram", "snapchat_label":
+                  "Numéro de téléphone trouvé pour Snapchat", "not_found": "Aucun",
+                  "err_input_title": "Erreur de saisie",
+                  "err_input_message": "Le numéro de téléphone et/ou le code région est/son mal formé(s)"},
+  "english_text": {"app_title": "ignorant GUI", "phone_label": "Telephone number",
+                   "region_label": "International code", "check_all": "Select all",
+                   "phone_button": "Search",
+                   "error_title": "Entry error", "error_message": "phone number is missing or in bad form",
+                   "amazon_label": "Phone number found on Amazon", "instagram_label":
+                   "Phone number found on Instagram", "snapchat_label":
+                   "Phone number found on Snapchat", "not_found": "None", "err_input_title": "Input error",
+                   "err_input_message": "The phone number and/or the region code is/are wrong"}
+}
