@@ -2,6 +2,7 @@ from FormView import GuiView
 from IgnorantModel import IgnorantModel
 from FormModel import GuiModel
 
+
 class FormController:
     def __init__(self, parent):
         self.parent = parent

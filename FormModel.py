@@ -1,5 +1,6 @@
 from Serializers import *
 
+
 class GuiModel:
     def __init__(self, parent):
         self.parent = parent
