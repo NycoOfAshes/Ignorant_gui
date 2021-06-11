@@ -3,7 +3,7 @@
 <widgets>
     <Root>
         <title id="app_title" />
-        <iconbitmap bitmap="ignorant_gui.ico" />
+        <iconbitmap bitmap="img/ignorant_gui.ico" />
         <grid />
         <update />
         <resizable height="0" width="0" />

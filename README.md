@@ -10,6 +10,8 @@
 
 ## General info
 
+![gui](img/ignorant_gui.JPG)
+
 A simple gui for Ignorant from [Megadose](https://github.com/MegaDose). Uses phonenumbers from [nyaruka](https://github.com/nyaruka) and [tkinter](https://wiki.python.org/moin/TkInter)
 
 ## Licence
