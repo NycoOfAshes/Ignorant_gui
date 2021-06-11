@@ -6,6 +6,7 @@
 * [Perequisite](#perquisite)
 * [Main libraries used](#main-libraries-used)
 * [Installation](#installation)
+* [How to use](#how-to-use)
 
 
 ## General info
@@ -40,3 +41,17 @@ python3 -m install -r requirements.txt
 ```
 python3 main.py
 ```
+
+## How to use
+
+#### Imput a phone number
+![gui](img/ignorant_gui2.JPG)
+
+#### Imput an international code
+![gui](img/ignorant_gui3.JPG)
+
+#### Select a site where testing the phone number, or select all to check in all sites
+![gui](img/ignorant_gui4.JPG)
+
+#### Then push on the search button (activated once you fill all entries and select at least one site)
+![gui](img/ignorant_gui5.JPG)
