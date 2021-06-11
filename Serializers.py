@@ -6,6 +6,11 @@ from xml.etree import cElementTree as Tree
 class SerializerFactory:
 
     def create(self, key):
+        """
+        Returns the right serializer according to key
+        :param key:
+        :return: the right serializer
+        """
         if key == "doc":
             return XmlTreeSerializer()
         elif key == "dic":
@@ -13,7 +18,9 @@ class SerializerFactory:
 
 
 class Serializer:
-
+    """
+    Interface Serializer
+    """
     def deserialize_doc(self, doc):
         pass
 
@@ -25,6 +32,11 @@ class XmlTreeSerializer(Serializer):
         self._root = None
 
     def deserialize_doc(self, tree):
+        """
+        Deserialize an xml document into a dictionary with the xml.etree api
+        :param tree:
+        :return: a dictionary
+        """
         self._xml_tree = tree
         self._root = self._xml_tree.getroot()
         self._dict = {self._root.tag: {}}
@@ -32,6 +44,12 @@ class XmlTreeSerializer(Serializer):
         return self._dict
 
     def _crawl_in_node(self, tree_level, dictionary=None):
+        """
+        Builds the dictionary by scraping the xml document
+        :param tree_level:
+        :param dictionary:
+        :return: Non
+        """
         if dictionary is None:
             dictionary = {}
 
@@ -61,7 +79,13 @@ class XmlTreeSerializer(Serializer):
                 self._crawl_in_node(e, dict_to_add)
 
     def _get_node_dict_name(self, node, dictionary, i):
-
+        """
+        Adds a number to a node tag if already exists as a dictionary key
+        :param node:
+        :param dictionary:
+        :param i:
+        :return: node tag
+        """
         if node.tag in dictionary.keys():
             return node.tag + str(i)
         else:
@@ -71,6 +95,12 @@ class XmlTreeSerializer(Serializer):
 class JsonSerializer(Serializer):
 
     def deserialize_doc(self, dictionary):
+        """
+        Hydrates config text instances with the input dictionary keys, transformed keys and values
+        stocks config texts in the objects_dict and returns this dictionary
+        :param dictionary:
+        :return: dictionary of configtext objects
+        """
         objects_dict = {}
         if dictionary["object_type"] == "ConfigText":
             for key, value in dictionary.items():
@@ -96,6 +126,12 @@ class ConfigText:
 class Parser:
 
     def parse(self, file):
+        """
+        choose the right parser according to the file extension detected
+        Returns the right parsed document
+        :param file:
+        :return: a parsed document
+        """
         file_format = self._get_file_format(file.name)
         if file_format == ".json":
             return self._parse_json(file)
@@ -103,7 +139,11 @@ class Parser:
             return self._parse_xml(file)
 
     def _get_file_format(self, file_name):
-
+        """
+        Detects and returns a file extension
+        :param file_name:
+        :return: a file extension
+        """
         pattern = re.compile('^([a-zA-Z_\\.\-]*)+(.json|.xml)$')
         match = pattern.match(file_name)
         if match:

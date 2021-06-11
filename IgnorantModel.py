@@ -14,6 +14,13 @@ class IgnorantModel:
         self.region_code = ""
 
     def report(self, dictionary1):
+        """
+        Tests the phone number validity with phonenumbers
+        Tests the phone number presence within platforms selected
+        Builds  and returns a dictionary of widgets infos to build
+        :param dictionary1:
+        :return: a dictionary with widgets parameters to build
+        """
         phone_num = dictionary1["phone_entry_var"].get()
         region_num = dictionary1["region_entry_var"].get()
         plateforms = dictionary1["check_button_vars"]
@@ -59,7 +66,7 @@ class IgnorantModel:
         Uses the phonenumbers module from  daviddrysdale https://github.com/daviddrysdale. Launches the phonenumbers
         parser and gives a phone number object with the national number and the international code. Then the phone
         number and its international code is checked. If the phone number is false or a number parsing exception is
-        raised , an error message box is displayed.
+        raised , an error message box is returned.
         :param phonenumber:
         :param regioncode:
         :return: a dictionary including a formated phone number for display and the phone number dictionary.
@@ -78,6 +85,12 @@ class IgnorantModel:
                         "phonenumber": phone_number}
 
     def _set_obj_dict(self, dictionary, text):
+        """
+        Reads a dictionary of lists build by Ignorant and returns a dictionary with widgets parameters to build
+        :param dictionary:
+        :param text:
+        :return: a dictionary with widgets parameters to build
+        """
         del dictionary["all_label_var"]
         obj_dict = {}
         for key, value in dictionary.items():
