@@ -55,3 +55,6 @@ python3 main.py
 
 #### Then push on the search button (activated once you fill all entries and select at least one site)
 ![gui](img/ignorant_gui5.JPG)
+
+#### It displays all positive results. Only one here. The phone number is displayed instead of "phone number"
+![gui](img/ignorant_gui6.JPG)
