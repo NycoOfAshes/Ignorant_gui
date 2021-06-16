@@ -28,7 +28,7 @@ A simple gui for Ignorant from [Megadose](https://github.com/MegaDose). Uses pho
 
 ## Installation
 
-### With GitHub
+### With Git
 
 ```
 git clone https://github.com/NycoOfAshes/Ignorant_gui
