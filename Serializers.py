@@ -144,10 +144,10 @@ class Parser:
         :param file_name:
         :return: a file extension
         """
-        pattern = re.compile('^([a-zA-Z_\\.\-]*)+(.json|.xml)$')
+        pattern = re.compile("^([a-zA-Z_\-]*[\\\|/])*([a-zA-Z_\-]*){1}(.json|.xml)$")
         match = pattern.match(file_name)
         if match:
-            return match.group(2)
+            return match.group(3)
 
     def _parse_json(self, file):
         return json.load(file)
