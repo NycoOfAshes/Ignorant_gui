@@ -11,7 +11,7 @@
 
 ## General info
 
-![gui](img/ignorant_gui.JPG)
+![gui](ReadmeImg/ignorant_gui.JPG)
 
 A simple gui for Ignorant from [Megadose](https://github.com/MegaDose). Uses phonenumbers from [nyaruka](https://github.com/nyaruka) and [tkinter](https://wiki.python.org/moin/TkInter)
 
@@ -28,7 +28,7 @@ A simple gui for Ignorant from [Megadose](https://github.com/MegaDose). Uses pho
 
 ## Installation
 
-### With Git
+### With GitHub
 
 ```
 git clone https://github.com/NycoOfAshes/Ignorant_gui
@@ -45,16 +45,16 @@ python3 main.py
 ## How to use
 
 #### Imput a phone number
-![gui](img/ignorant_gui2.JPG)
+![gui](ReadmeImg/ignorant_gui2.JPG)
 
 #### Imput an international code
-![gui](img/ignorant_gui3.JPG)
+![gui](ReadmeImg/ignorant_gui3.JPG)
 
 #### Select a site where testing the phone number, or select all to check in all sites
-![gui](img/ignorant_gui4.JPG)
+![gui](ReadmeImg/ignorant_gui4.JPG)
 
 #### Then push on the search button (activated once you fill all entries and select at least one site)
-![gui](img/ignorant_gui5.JPG)
+![gui](ReadmeImg/ignorant_gui5.JPG)
 
 #### It displays all positive results. Only one here. The phone number is displayed instead of "phone number"
-![gui](img/ignorant_gui6.JPG)
+![gui](ReadmeImg/ignorant_gui6.JPG)
