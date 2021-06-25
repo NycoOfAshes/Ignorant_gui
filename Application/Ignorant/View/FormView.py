@@ -1,7 +1,7 @@
 import re
 from tkinter import *
 from tkinter import messagebox
-
+import os
 
 class GuiView(Tk):
 
@@ -76,6 +76,10 @@ class GuiView(Tk):
                 widget.config(validatecommand=valid_command)
             elif key == "command":
                 widget.config(command=self._button_click)
+            elif key == "iconbitmap":
+                file_name = value["attribs"]["bitmap"]
+                path_name = os.path.join("Application", "Ignorant", "Image", file_name)
+                widget.iconbitmap(path_name)
             else:
                 attrib_dict = dictionary[key]
                 if "attribs" in attrib_dict.keys():
