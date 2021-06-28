@@ -197,6 +197,7 @@ class GuiView(Tk):
         if var == "selector_var":
             self._set_text_var_lang(var)
         elif var in getattr(self, "check_button_vars"):
+            self._delete_widgets()
             self._check_button_choice(getattr(self, var), var)
 
     def _check_entry(self, entry_name, action_code, new_text):
