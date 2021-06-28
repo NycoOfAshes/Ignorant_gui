@@ -78,7 +78,10 @@ class GuiView(Tk):
                 widget.config(command=self._button_click)
             elif key == "iconbitmap":
                 file_name = value["attribs"]["bitmap"]
-                path_name = os.path.join("Application", "Ignorant", "Image", file_name)
+                if os.name == "nt":
+                    path_name = os.path.join("Application", "Ignorant", "Image", file_name + ".ico")
+                else:
+                    path_name = os.path.join("Application", "Ignorant", "Image", file_name + ".xbm")
                 widget.iconbitmap(path_name)
             else:
                 attrib_dict = dictionary[key]
