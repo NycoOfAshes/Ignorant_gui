@@ -80,9 +80,7 @@ class GuiView(Tk):
                 file_name = value["attribs"]["bitmap"]
                 if os.name == "nt":
                     path_name = os.path.join("Application", "Ignorant", "Image", file_name + ".ico")
-                else:
-                    path_name = os.path.join("Application", "Ignorant", "Image", file_name + ".xbm")
-                widget.iconbitmap(path_name)
+                    widget.iconbitmap(path_name)
             else:
                 attrib_dict = dictionary[key]
                 if "attribs" in attrib_dict.keys():
