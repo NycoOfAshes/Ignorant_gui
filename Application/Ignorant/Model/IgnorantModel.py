@@ -91,7 +91,9 @@ class IgnorantModel:
         :param text:
         :return: a dictionary with widgets parameters to build
         """
-        del dictionary["all_label_var"]
+
+        if "all_label_var" in dictionary.keys():
+            del dictionary["all_label_var"]
         obj_dict = {}
         for key, value in dictionary.items():
             report_dict = value[0]
